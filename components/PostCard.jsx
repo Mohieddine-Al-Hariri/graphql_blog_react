@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         unoptimized
         loader={grpahCMSImageLoader}
         alt={post?.title}
-        className="shadow-lg rounded-t-lg lg:rounded-lg"
+        className="shadow-lg rounded-t-lg lg:rounded-lg "
         fill
         src={post?.featuredImage?.url}
       />
@@ -33,9 +33,9 @@ const PostCard = ({ post }) => {
           unoptimized
           loader={grpahCMSImageLoader}
           alt={post.author?.name}
-          height="30"
-          width="30"
-          className="align-middle rounded-full"
+          height="35"
+          width="35"
+          className="align-middle rounded-full aspect-square object-cover border-2 border-solid border-black"
           src={post.author?.photo.url}
         />
         <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author?.name}</p>

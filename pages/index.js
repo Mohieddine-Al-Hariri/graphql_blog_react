@@ -19,7 +19,6 @@ export default function Home({ posts }) {
         regex.test(item.node.title) /* || regex.test(item.content...)*/
     );
   };
-
   const handleSearchChange = (e) => {
     e.preventDefault();
     clearTimeout(searchTimeout);
@@ -61,7 +60,7 @@ export default function Home({ posts }) {
             value={searchText}
             onChange={handleSearchChange}
             required
-            className='rounded-full pl-8 pr-5 py-2'
+            className='rounded-full pl-8 pr-5 py-2 border-solid border-2 border-gray-200 '
             />
           </div>
       </form>

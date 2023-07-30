@@ -42,12 +42,12 @@ const PostDetail = ({ post }) => {
     }
   };
   var arabic = /[\u0600-\u06FF]/;
-  console.log("children...: ",post?.content.raw.children)
+  // console.log("children...: ",post?.content.raw.children)
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <img src={post?.featuredImage?.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+          <img src={post?.featuredImage?.url} alt="" className="object-top h-full w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className={`px-4 lg:px-0 ${arabic.test(post?.content.raw.children[0].children[0].text)? "text-right": "text-left"}`} >
           <div className="flex items-center mb-8 w-full ">
@@ -56,7 +56,7 @@ const PostDetail = ({ post }) => {
                 alt={post?.author?.name}
                 height="60px"
                 width="60px"
-                className="align-middle rounded-full"
+                className="align-middle rounded-full aspect-square object-cover "
                 src={post?.author?.photo.url}
               />
               <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post?.author?.name}</p>
